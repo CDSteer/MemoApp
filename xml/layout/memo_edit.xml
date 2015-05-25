@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Memo:"
+                android:id="@+id/textView2"
+                android:layout_alignTop="@+id/memo_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/memo_content"
+                android:hint="enter memo"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2"/>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Priority:"
+                android:id="@+id/textView3"
+                android:layout_alignTop="@+id/radio_low"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_column="0" />
+
+            <RadioGroup
+                android:id="@+id/memo_mode"
+                android:layout_width="121dp"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:value="1"
+                    android:id="@+id/radio_low"
+                    android:checked="true"
+                    android:layout_below="@+id/alarm_input"
+                    android:layout_alignLeft="@+id/alarm_input"
+                    android:layout_column="1" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Important"
+                    android:value="2"
+                    android:id="@+id/radio_medium"
+                    android:checked="false"
+                    android:layout_alignTop="@+id/radio_low"
+                    android:layout_toRightOf="@+id/radio_low"
+                    android:layout_column="1" />
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urgent"
+                    android:value="3"
+                    android:id="@+id/radio_urgent"
+                    android:checked="false"
+                    android:layout_alignBottom="@+id/radio_medium"
+                    android:layout_toRightOf="@+id/radio_medium"
+                    android:layout_column="1" />
+            </RadioGroup>
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Optional Alarm:"
+                android:id="@+id/alarm_text"
+
+                android:layout_alignBottom="@+id/alarm_input"
+                android:layout_alignLeft="@+id/radio_urgent"
+                android:layout_column="0" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Time:"
+                android:id="@+id/time_text"
+                android:layout_alignBottom="@+id/alarm_input"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:hint="12:00"
+                android:ems="10"
+                android:id="@+id/alarm_input"
+                android:layout_column="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Date:"
+                android:id="@+id/date_text"
+
+                android:layout_alignBottom="@+id/alarm_input"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_column="0" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:hint="dd-MM-YYYY"
+                android:ems="10"
+                android:id="@+id/date_input"
+                android:layout_column="1" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:id="@+id/update_button"
+            android:layout_below="@+id/alarm_input"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="#a0db8e"
+            android:layout_column="0"
+            android:layout_span="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:id="@+id/del_button"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ee4000"
+                android:layout_column="0"
+                android:layout_span="2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/can_button"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#ff0"
+                android:layout_column="0"
+                android:layout_span="2" />
+        </TableRow>
+    </TableLayout>
+
+
+
+</LinearLayout>

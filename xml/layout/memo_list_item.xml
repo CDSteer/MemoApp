@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8px">
+
+    <TextView
+        android:id="@+id/content"
+        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/content"/>
+
+    <TextView
+        android:id="@+id/urgentLvl"
+        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urgentLvl"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urgentLvl"/>
+
+    <TextView
+        android:id="@+id/alarm"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/urgentLvl"/>
+
+    <TextView
+        android:id="@+id/time_left"
+        android:visibility="gone"
+        android:textColor="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alarm"/>
+
+</LinearLayout>
